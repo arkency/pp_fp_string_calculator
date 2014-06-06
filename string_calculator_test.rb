@@ -13,4 +13,8 @@ class StringCalculatorTest < Test::Unit::TestCase
   def test_add_single_number
     assert_equal 7, @calculator.add("7")
   end
+
+  def test_add_two_numbers
+    assert_equal 5, @calculator.add("2,3")
+  end
 end
