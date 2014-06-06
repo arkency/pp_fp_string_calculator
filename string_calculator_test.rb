@@ -25,4 +25,10 @@ class StringCalculatorTest < Test::Unit::TestCase
   def test_custom_delimiter
     assert_equal 42, @calculator.add("//.\n40.2")
   end
+  
+  def test_exception_on_negative_value
+    assert_raise ArgumentError do
+      @calculator.add("1,-2,3")
+    end
+  end
 end
