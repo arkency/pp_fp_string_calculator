@@ -17,4 +17,8 @@ class StringCalculatorTest < Test::Unit::TestCase
   def test_add_two_numbers
     assert_equal 5, @calculator.add("2,3")
   end
+
+  def test_newline_as_separator
+    assert_equal 6, @calculator.add("1\n2,3")
+  end
 end
